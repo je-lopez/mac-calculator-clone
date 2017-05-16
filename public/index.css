@@ -22,6 +22,11 @@ body {
   width: 232px;
 }
 
+/* calculation display div */
+.calculator-output {
+  height: 79px;
+}
+
 /* all buttons */
 .calculator-btn {
   display: inline-block;
@@ -32,21 +37,33 @@ body {
   margin-left: 1px;
   margin-top: 1px;
   text-align: center;
+  -webkit-transition-delay: 100ms;
 }
 
-/* calculation display div */
-.calculator-output {
-  height: 79px;
-}
-
-/* gray and orange divs */
-.calculator-gray {
+/* gray and orange buttons */
+.calculator-btn-gray {
   background-color: rgb(221, 221, 221);
 }
 
-.calculator-orange {
+.calculator-btn-gray:hover {
+  background-color: rgb(210, 210, 210);
+}
+
+.calculator-btn-gray:active {
+  background-color: rgb(199, 199, 199);
+}
+
+.calculator-btn-orange {
   background-color: rgb(246, 145, 51);
-  color: white;
+  color: rgb(255, 255, 255);
+}
+
+.calculator-btn-orange:hover {
+  background-color: rgb(235, 134, 40);
+}
+
+.calculator-btn-orange:active {
+  background-color: rgb(224, 123, 29);
 }
 
 /* div sizes */

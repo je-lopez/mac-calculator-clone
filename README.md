@@ -48,15 +48,15 @@ During this phase you should…
 
 ### Specs
 
-  - [ ] All text is in the Roboto web font
-  - [ ] Your HTML and CSS follows this style guide
-  - [ ] The calculator is positioned in the center of the page, both vertically and horizontally
-  - [ ] The calculator is a fixed size. It does not change in size when the page resizes.
-  - [ ] If the window is too small for the calculator, the page scrolls, both vertically and horizontally
-  - [ ] Each button has a CSS transition to slightly darken the background color on hover over 100ms
-  - [ ] Each button has a CSS transition to slightly darken the background color on click over 100ms
-  - [ ] All class names re: the calculator are name-spaced under .calculator-…
-  - [ ] Your stylesheet contains little to no duplicate style declarations
+  - [x] All text is in the Roboto web font
+  - [x] Your HTML and CSS follows this style guide
+  - [x] The calculator is positioned in the center of the page, both vertically and horizontally
+  - [x] The calculator is a fixed size. It does not change in size when the page resizes.
+  - [x] If the window is too small for the calculator, the page scrolls, both vertically and horizontally
+  - [x] Each button has a CSS transition to slightly darken the background color on hover over 100ms
+  - [x] Each button has a CSS transition to slightly darken the background color on click over 100ms
+  - [x] All class names re: the calculator are name-spaced under .calculator-…
+  - [x] Your stylesheet contains little to no duplicate style declarations
 
 ### Stage 2
 
