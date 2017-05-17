@@ -7,33 +7,34 @@
   <title>Mac Calculator Clone</title>
 
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 <body>
   <div class="calculator-container">
-    <div class="calculator-output">0</div>
+    <div id="calculator-output" class="calculator-output">0</div>
 
-    <div id="clear" class="calculator-btn-gray calculator-small calculator-btn">AC</div>
-    <div id="pos-neg" class="calculator-btn-gray calculator-small calculator-btn">+/-</div>
-    <div id="percent" class="calculator-btn-gray calculator-small calculator-btn">%</div>
-    <div id="divide" class="calculator-btn-orange calculator-small calculator-btn">/</div>
-    <div id="seven" class="calculator-btn-gray calculator-small calculator-btn">7</div>
-    <div id="eighth" class="calculator-btn-gray calculator-small calculator-btn">8</div>
-    <div id="nine" class="calculator-btn-gray calculator-small calculator-btn">9</div>
-    <div id="multiply" class="calculator-btn-orange calculator-small calculator-btn">x</div>
-    <div id="four" class="calculator-btn-gray calculator-small calculator-btn">4</div>
-    <div id="five" class="calculator-btn-gray calculator-small calculator-btn">5</div>
-    <div id="six" class="calculator-btn-gray calculator-small calculator-btn">6</div>
-    <div id="subtract" class="calculator-btn-orange calculator-small calculator-btn">-</div>
-    <div id="one" class="calculator-btn-gray calculator-small calculator-btn">1</div>
-    <div id="two" class="calculator-btn-gray calculator-small calculator-btn">2</div>
-    <div id="three" class="calculator-btn-gray calculator-small calculator-btn">3</div>
-    <div id="add" class="calculator-btn-orange calculator-small calculator-btn">+</div>
-    <div id="zero" class="calculator-btn-gray calculator-medium calculator-btn"><span>0</span></div>
-    <div id="dot" class="calculator-btn-gray calculator-small calculator-btn">.</div>
-    <div id="equals" class="calculator-btn-orange calculator-small calculator-rounded calculator-btn">=</div>
+    <div data-value="clear" class="calculator-btn-gray calculator-small calculator-btn">AC</div>
+    <div data-value="pos-neg" class="calculator-btn-gray calculator-small calculator-btn">+/-</div>
+    <div data-value="percent" class="calculator-btn-gray calculator-small calculator-btn">%</div>
+    <div data-value="/" class="calculator-btn-orange calculator-small calculator-btn">/</div>
+    <div data-value="7" class="calculator-btn-gray calculator-small calculator-btn">7</div>
+    <div data-value="8" class="calculator-btn-gray calculator-small calculator-btn">8</div>
+    <div data-value="9" class="calculator-btn-gray calculator-small calculator-btn">9</div>
+    <div data-value="*" class="calculator-btn-orange calculator-small calculator-btn">x</div>
+    <div data-value="4" class="calculator-btn-gray calculator-small calculator-btn">4</div>
+    <div data-value="5" class="calculator-btn-gray calculator-small calculator-btn">5</div>
+    <div data-value="6" class="calculator-btn-gray calculator-small calculator-btn">6</div>
+    <div data-value="-" class="calculator-btn-orange calculator-small calculator-btn">-</div>
+    <div data-value="1" class="calculator-btn-gray calculator-small calculator-btn">1</div>
+    <div data-value="2" class="calculator-btn-gray calculator-small calculator-btn">2</div>
+    <div data-value="3" class="calculator-btn-gray calculator-small calculator-btn">3</div>
+    <div data-value="+" class="calculator-btn-orange calculator-small calculator-btn">+</div>
+    <div data-value="0" class="calculator-btn-gray calculator-medium calculator-btn"><span>0</span></div>
+    <div data-value="dot" class="calculator-btn-gray calculator-small calculator-btn">.</div>
+    <div data-value="=" class="calculator-btn-orange calculator-small calculator-rounded calculator-btn">=</div>
   </div> <!-- end container -->
 
+  <script src="./index.js"></script>
 </body>
 </html>
