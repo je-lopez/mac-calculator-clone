@@ -159,9 +159,8 @@ function controller(value) {
       setView(val);
     } else {
       output.push(value);
+      return;
     }
-
-    return;
   } else {
     var val;
 
