@@ -82,39 +82,39 @@ During this phase you should…
 
 ### Specs
 
-  - [ ] Your JavaScript is written in ES5
-  - [ ] Your JavaScript follows this style guide
+  - [x] Your JavaScript is written in ES5
+  - [x] Your JavaScript follows this style guide
   - [ ] Your JavaScript defines 1 or less global variables
-  - [ ] The Calculator display is not an input
-  - [ ] Typing a relevant key at any point is reflected on the calculator
-  - [ ] Typing a relevant key causes the corresponding button on the calculator to appear to have been pressed. AKA flashes active
-  - [ ] The state of the calculator is not be stored in the DOM
-  - [ ] The mathematical operations for your calculator are each their own function, and are defined outside of any DOM event handler
+  - [x] The Calculator display is not an input
+  - [x] Typing a relevant key at any point is reflected on the calculator
+  - [x] Typing a relevant key causes the corresponding button on the calculator to appear to have been pressed. AKA flashes active //does this differ from the css transition in part 1? flashes if click lasts 1 sec
+  - [x] The state of the calculator is not be stored in the DOM
+  - [x] The mathematical operations for your calculator are each their own function, and are defined outside of any DOM event handler
   - [ ] When the length of the number displayed exceeds the width available, the font-size deterministically drops
 
 Calculator functionality and behavior is consistent with Mac calculator rules:
 
-  - [ ] pressing AC displays 0
-  - [ ] pressing AC 8 +/- displays -8
-  - [ ] pressing AC -5 +/- displays 5
-  - [ ] pressing AC 99 % displays 0.99
-  - [ ] pressing AC 9 + 9 - 3 = displays 15
-  - [ ] pressing AC 6 + = displays 12
-  - [ ] pressing AC 4 x 4 = displays 16
-  - [ ] pressing AC 64 + = displays 128
-  - [ ] pressing AC 9 + displays 9
-  - [ ] pressing AC 8 - 5 - displays 3
-  - [ ] pressing AC 9 - 5 + displays 4
+  - [x] pressing AC displays 0
+  - [x] pressing AC 8 +/- displays -8
+  - [x] pressing AC -5 +/- displays 5
+  - [x] pressing AC 99 % displays 0.99
+  - [x] pressing AC 9 + 9 - 3 = displays 15
+  - [x] pressing AC 6 + = displays 12
+  - [x] pressing AC 4 x 4 = displays 16
+  - [x] pressing AC 64 + = displays 128
+  - [x] pressing AC 9 + displays 9
+  - [x] pressing AC 8 - 5 - displays 3
+  - [x] pressing AC 9 - 5 + displays 4
   - [ ] pressing AC 9 + 9 + + + displays 18
-  - [ ] pressing AC 5 + 3 x 6 + displays 23
-  - [ ] pressing AC 9 x displays 9
-  - [ ] pressing AC 3 x 5 x displays 15
-  - [ ] pressing AC 6 / 3 displays 2
+  - [x] pressing AC 5 + 3 x 6 + displays 23
+  - [x] pressing AC 9 x displays 9
+  - [x] pressing AC 3 x 5 x displays 15
+  - [x] pressing AC 6 / 3 displays 2
   - [ ] pressing AC 3 x 4 x x x displays 12
-  - [ ] pressing AC 4 + 3 x 6 x displays 18
-  - [ ] pressing AC 3 + 5 x displays 5
-  - [ ] pressing AC 3 + 5 x 6 x displays 30
-  - [ ] pressing AC 3 + 5 x 6 x 2 + displays 63
+  - [x] pressing AC 4 + 3 x 6 x displays 18
+  - [x] pressing AC 3 + 5 x displays 5
+  - [x] pressing AC 3 + 5 x 6 x displays 30
+  - [x] pressing AC 3 + 5 x 6 x 2 + displays 63
 
 ### Stage 3
 

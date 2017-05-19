@@ -1,4 +1,4 @@
-// TODO: I reverted back to not nesting everything to get it mostly working again. Am I too deep? tips?
+// TODO: I reverted back to not nesting everything to get it mostly working again. Tips?
 var output = [];
 // TODO: look into bubbling! (note to self)
 var buttons = document.getElementsByClassName( "calculator-btn" );
@@ -14,7 +14,7 @@ for (i = 0; i < buttons.length; i++) {
 function clear() {
   output.length = 0;
   document.querySelector("#clear").innerText = "AC";
-  updateOutput(0);
+  setView(0);
 }
 
 function percentage() {
@@ -29,13 +29,16 @@ function dot() {
   return output.pop() + ".";
 }
 
-// TODO: refactor mult/div since only difference is (* vs /)
 function multiply(position, value) {
-  return position === -1 ? output[output.length - 2] * value : output[0] * output[2];
+  return position === -1
+         ?
+         output[output.length - 2] * value : output[0] * output[2];
 }
 
 function divide(position, value) {
-  return position === -1 ? output[output.length - 2] / value : output[0] / output[2];
+  return position === -1
+         ?
+         output[output.length - 2] / value : output[0] / output[2];
 }
 
 function add() {
@@ -43,14 +46,46 @@ function add() {
 }
 
 function subtract() {
-  return parseInt(output[0]) - parseInt(output[0]);
+  return parseInt(output[0]) - parseInt(output[2]);
 }
 
-function calculate(argument) {
-  // body...
+function calculate(operator) {
+  var val;
+
+  switch (operator) {
+    case "*":
+      val = multiply();
+      break;
+    case "/":
+      val = divide();
+      break;
+    case "+":
+      val = add();
+      break;
+    case "-":
+      val = subtract();
+      break;
+    default:
+      break;
+  }
+
+  return val;
 }
 
-function updateOutput(val) {
+function calculateController() {
+  var operators = ["*", "/", "+", "-"];
+
+  if (output.length === 1) return output[0];
+
+  var operator = operators.indexOf(output[1]);
+
+  if (output.length === 2) output.push(output[0]);
+
+  return calculate(operators[operator]);
+  // does not yet account for 2 + 3 *
+}
+
+function setView(val) {
   console.log(output);
   document.querySelector("#calculator-output").innerText = val;
 }
@@ -66,7 +101,7 @@ function controller(value) {
     }
   }
 
-// TODO: nest this switch in the 1000th if statement to remove duplication ? or better way to handle it?
+// TODO: nest this in if statement or should I let certain items fall through?
 // TODO: number with "." isn't calculated properly
   switch (value) {
     case "clear":
@@ -76,34 +111,38 @@ function controller(value) {
       if (isNaN(output[output.length - 1])) return;
       var val = percentage();
       output.push(val);
-      updateOutput(val);
+      setView(val);
       return;
     case "pos-neg":
       if (isNaN(output[output.length - 1])) return;
       var val = posNeg();
       output.push(val);
-      updateOutput(val);
+      setView(val);
       return;
     case ".":
       if (isNaN(output[output.length - 1])) return;
       var val = dot();
       output.push(val);
-      updateOutput(val);
+      setView(val);
       return;
-    // default:
-    //   calculate();
-    //   return;
+    case "=":
+      var val = calculateController();
+      output = [val];
+      setView(val);
+      return;
+    default:
+      break;
   }
 
   if (!isNaN(value) && !isNaN(output[output.length - 1])) {
     output.push(output.pop() + value);
-    updateOutput(output[output.length - 1]);
+    setView(output[output.length - 1]);
     return;
   }
 
   if (output.length < 3) {
     output.push(value);
-    if (!isNaN(value)) updateOutput(value);
+    if (!isNaN(value)) setView(value);
     return;
   }
 
@@ -113,11 +152,11 @@ function controller(value) {
     if (["*", "/"].includes(output[1])) {
       val = output[1] === "*" ? multiply(0) : divide(0);
       output = [val, value];
-      updateOutput(val);
+      setView(val);
     } else if (!["*", "/"].includes(value)) {
       val = output[1] === "+" ? add() : subtract();
       output = [val, value];
-      updateOutput(val);
+      setView(val);
     } else {
       output.push(value);
     }
@@ -135,6 +174,6 @@ function controller(value) {
       output = [val, value];
     }
 
-    updateOutput(val);
+    setView(val);
   }
 }
