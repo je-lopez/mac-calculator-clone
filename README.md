@@ -84,7 +84,7 @@ During this phase you should…
 
   - [x] Your JavaScript is written in ES5
   - [x] Your JavaScript follows this style guide
-  - [ ] Your JavaScript defines 1 or less global variables
+  - [x] Your JavaScript defines 1 or less global variables
   - [x] The Calculator display is not an input
   - [x] Typing a relevant key at any point is reflected on the calculator
   - [x] Typing a relevant key causes the corresponding button on the calculator to appear to have been pressed. AKA flashes active //does this differ from the css transition in part 1? flashes if click lasts 1 sec
@@ -146,13 +146,13 @@ During this phase you should…
 
 ### General
 
-  - [ ] Repository includes a README file with basic installation and setup instructions.
-  - [ ] All package dependencies are properly declared in package.json.
-  - [ ] All major features are added via pull requests with a clear description and concise commit messages.
+  - [x] Repository includes a README file with basic installation and setup instructions.
+  - [x] All package dependencies are properly declared in package.json.
+  - [x] All major features are added via pull requests with a clear description and concise commit messages.
   - [ ] Code uses a linter and there are no linting errors.
-  - [ ] Variables, functions, files, etc. have appropriate and meaningful names.
+  - [x] Variables, functions, files, etc. have appropriate and meaningful names.
   - [ ] Functions are small and serve a single purpose.
-  - [ ] The artifact produced is properly licensed, preferably with the MIT license.
+  - [x] The artifact produced is properly licensed, preferably with the MIT license.
 
 ### Stretch
 
